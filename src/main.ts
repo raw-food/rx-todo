@@ -57,7 +57,9 @@ fromEvent<MouseEvent>(input, 'input')
 
 fromEvent<KeyboardEvent>(input, 'keydown')
   .pipe(
-    filter((event: KeyboardEvent) => event.key === 'Enter'),
+    filter(
+      (event: KeyboardEvent) => event.key === 'Enter' && !event.isComposing
+    ),
     withLatestFrom(input$),
     map(([, text]) => text),
     filter((text) => text.trim() !== '')
