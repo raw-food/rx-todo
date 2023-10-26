@@ -1,0 +1,108 @@
+/* 전체 앱 스타일링 */
+#app {
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  overflow-x: hidden;
+  color: #4a4a4a; /* 기본 텍스트 색상 */
+  background-color: #f7f7f7; /* 배경 색상 */
+}
+
+/* 헤더 스타일 */
+h1 {
+  color: #5a55da;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-out;
+  font-size: 2.5rem; /* 폰트 크기 조정 */
+}
+
+h1:hover {
+  color: #7868e6;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 입력 필드 스타일 */
+#todo-input {
+  padding: 12px 15px;
+  width: 320px;
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#todo-input:focus {
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Todo 리스트 스타일 */
+#todo-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#todo-list > div {
+  background-color: #fff;
+  border: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#todo-list > div:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* 체크박스와 텍스트 스타일 */
+input[type='checkbox'] {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+input[type='checkbox']:hover {
+  transform: scale(1.1);
+}
+
+#todo-list span {
+  flex-grow: 1;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
