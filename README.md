@@ -9,5 +9,5 @@
   - 사용방법은 Array.prototype.map과 동일함
   - 보통 타입을 다른 타입으로써 변환할 많이 사용함
 - withLatestFrom
- - 해당 오퍼레이터가 실행되는시점에 source observable의 마지막 데이터를 가져온다.
- - [event, data] 와 같은 식으로 치환됨
+  - 해당 오퍼레이터가 실행되는시점에 source observable의 마지막 데이터를 가져온다.
+  - [event, data] 와 같은 식으로 치환됨
